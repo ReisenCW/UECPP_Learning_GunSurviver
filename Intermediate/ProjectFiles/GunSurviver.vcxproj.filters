@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\GunSurviver.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GunSurviver.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GunSurviverEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GunSurviver">
+      <UniqueIdentifier>{0CC22323-D3C7-35E9-92B4-46B10F7BA169}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GunSurviver\GunSurviver.Build.cs">
+      <Filter>Source\GunSurviver</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GunSurviver\GunSurviver.cpp">
+      <Filter>Source\GunSurviver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\GunSurviver.h">
+      <Filter>Source\GunSurviver</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

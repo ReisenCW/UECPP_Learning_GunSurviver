@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Unreal Projects\\learning\\GunSurviver\\GunSurviver\\Source\\GunSurviver\\GunSurviver.Build.cs",
+		"D:\\Unreal Projects\\learning\\GunSurviver\\GunSurviver\\Source\\GunSurviver.Target.cs",
+		"D:\\Unreal Projects\\learning\\GunSurviver\\GunSurviver\\Source\\GunSurviverEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.0"
+}

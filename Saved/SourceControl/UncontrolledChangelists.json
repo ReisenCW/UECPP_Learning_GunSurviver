@@ -1,0 +1,41 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/MainLevel.umap",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Level/MainLevel.umap",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/background.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/crosshair007.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sBg.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sBullet.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sEnemy_strip7.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sEnemyDead.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sGun.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sMap.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sPlayerIdle_strip4.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sPlayerRun_strip7.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Textures/sWall.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/sPlayerIdle_strip4_Sprite_3.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/sPlayerIdle_strip4_Sprite_2.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/sPlayerIdle_strip4_Sprite_1.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/sPlayerIdle_strip4_Sprite_0.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_6.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_5.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_4.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_3.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_2.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_1.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_0.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/FB_PlayerIdle.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/FB_PlayerRun.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_PlayerRun.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_PlayerIdle.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyDead.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyRun.uasset"
+			]
+		}
+	]
+}
