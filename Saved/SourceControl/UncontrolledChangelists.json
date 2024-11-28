@@ -34,7 +34,8 @@
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_PlayerRun.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_PlayerIdle.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyDead.uasset",
-				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyRun.uasset"
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyRun.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Blueprints/BP_Arena.uasset"
 			]
 		}
 	]
