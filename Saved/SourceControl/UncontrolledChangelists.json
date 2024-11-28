@@ -29,13 +29,19 @@
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_2.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_1.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/sPlayerRun_strip7_Sprite_0.uasset",
-				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/FB_PlayerIdle.uasset",
-				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/FB_PlayerRun.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_PlayerRun.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_PlayerIdle.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyDead.uasset",
 				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Flipbooks/FB_EnemyRun.uasset",
-				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Blueprints/BP_Arena.uasset"
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Blueprints/BP_Arena.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Level/BP_Player.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Blueprints/BP_Player.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Input/InputAction_Move.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Input/InputMappingContext_GunSurvivors.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Blueprints/BP_GameMode.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Input/InputAction_Shoot.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Idle/FB_PlayerIdle.uasset",
+				"D:/Unreal Projects/learning/GunSurviver/GunSurviver/Content/Assets/Sprites/Player/Run/FB_PlayerRun.uasset"
 			]
 		}
 	]

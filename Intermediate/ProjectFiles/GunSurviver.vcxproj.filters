@@ -11,6 +11,11 @@
     <None Include="..\..\Source\GunSurviverEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.editorconfig" />
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\shadertoolsconfig.json" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +42,24 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\GunSurviver\GunSurviver.h">
       <Filter>Source\GunSurviver</Filter>
+    </ClCompile>
+    <Filter Include="Source\GunSurviver\Private">
+      <UniqueIdentifier>{49D8833D-0651-357F-A3E6-49C0B849ABEE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GunSurviver\Private\MyGameMode.cpp">
+      <Filter>Source\GunSurviver\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\Private\PlayerCharacter.cpp">
+      <Filter>Source\GunSurviver\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\GunSurviver\Public">
+      <UniqueIdentifier>{A95BBEBB-CD75-39A7-83A1-B058845DF044}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GunSurviver\Public\MyGameMode.h">
+      <Filter>Source\GunSurviver\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\Public\PlayerCharacter.h">
+      <Filter>Source\GunSurviver\Public</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
