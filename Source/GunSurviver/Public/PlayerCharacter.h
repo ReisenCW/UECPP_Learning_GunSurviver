@@ -3,13 +3,23 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 
+#include "Bullet.h"
+
 #include "Components/CapsuleComponent.h"
+#include "Components/SceneComponent.h"
+#include "Components/InputComponent.h"
+
+#include "PaperSpriteComponent.h"
 #include "PaperFlipbookComponent.h"
+
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "Components/InputComponent.h"
+
 #include "InputActionValue.h"
+
 #include "GameFramework/Controller.h"
+
+#include "Engine/TimerHandle.h"
 
 #include "PlayerCharacter.generated.h"
 
@@ -25,7 +35,13 @@ public:
 	UCapsuleComponent* CapsuleComp;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	UPaperFlipbookComponent* CharacterFlipbook;
+	USceneComponent* GunParent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	UPaperSpriteComponent* GunComp;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	USceneComponent* BulletSpawnPosition;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UInputMappingContext* InputMappingContext;
@@ -35,6 +51,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UInputAction* ShootAction;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	UPaperFlipbookComponent* CharacterFlipbook;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UPaperFlipbook* IdleFlipbook;
@@ -54,8 +73,22 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector2D VerticalLimits;
 
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ABullet> BulletToSpawn;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	bool CanMove = true;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	bool CanShoot = true;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ShootCoolDownInSecs = 0.5f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float BulletSpeed = 300.0f;
+
+	FTimerHandle ShootCoolDownTimer;
 
 	virtual void BeginPlay() override;
 
@@ -70,4 +103,6 @@ public:
 
 	bool IsInMapBoundsHorizontal(float XPos);
 	bool IsInMapBoundsVertical(float ZPos);
+
+	void OnShootCollDownTimeOut();
 };
