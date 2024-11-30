@@ -49,6 +49,9 @@
     <ClCompile Include="..\..\Source\GunSurviver\Private\Bullet.cpp">
       <Filter>Source\GunSurviver\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\Private\Enemy.cpp">
+      <Filter>Source\GunSurviver\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GunSurviver\Private\MyGameMode.cpp">
       <Filter>Source\GunSurviver\Private</Filter>
     </ClCompile>
@@ -59,6 +62,9 @@
       <UniqueIdentifier>{A95BBEBB-CD75-39A7-83A1-B058845DF044}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GunSurviver\Public\Bullet.h">
+      <Filter>Source\GunSurviver\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\Public\Enemy.h">
       <Filter>Source\GunSurviver\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GunSurviver\Public\MyGameMode.h">
