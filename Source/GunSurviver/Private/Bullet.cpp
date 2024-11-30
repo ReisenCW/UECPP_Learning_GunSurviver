@@ -65,4 +65,5 @@ void ABullet::DisableBullet() {
 	IsDisabled = true;
 
 	SphereComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	BulletSprite->DestroyComponent();
 }

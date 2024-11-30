@@ -52,6 +52,9 @@
     <ClCompile Include="..\..\Source\GunSurviver\Private\Enemy.cpp">
       <Filter>Source\GunSurviver\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\Private\EnemySpawner.cpp">
+      <Filter>Source\GunSurviver\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GunSurviver\Private\MyGameMode.cpp">
       <Filter>Source\GunSurviver\Private</Filter>
     </ClCompile>
@@ -65,6 +68,9 @@
       <Filter>Source\GunSurviver\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GunSurviver\Public\Enemy.h">
+      <Filter>Source\GunSurviver\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GunSurviver\Public\EnemySpawner.h">
       <Filter>Source\GunSurviver\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GunSurviver\Public\MyGameMode.h">
