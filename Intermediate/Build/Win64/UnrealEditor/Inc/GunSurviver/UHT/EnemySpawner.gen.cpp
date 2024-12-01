@@ -18,9 +18,73 @@ GUNSURVIVER_API UClass* Z_Construct_UClass_AEnemySpawner_NoRegister();
 UPackage* Z_Construct_UPackage__Script_GunSurviver();
 // End Cross Module References
 
+// Begin Class AEnemySpawner Function OnEnemyDied
+struct Z_Construct_UFunction_AEnemySpawner_OnEnemyDied_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/EnemySpawner.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemySpawner_OnEnemyDied_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemySpawner, nullptr, "OnEnemyDied", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemySpawner_OnEnemyDied_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemySpawner_OnEnemyDied_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEnemySpawner_OnEnemyDied()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemySpawner_OnEnemyDied_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEnemySpawner::execOnEnemyDied)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnEnemyDied();
+	P_NATIVE_END;
+}
+// End Class AEnemySpawner Function OnEnemyDied
+
+// Begin Class AEnemySpawner Function OnPlayerDied
+struct Z_Construct_UFunction_AEnemySpawner_OnPlayerDied_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/EnemySpawner.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemySpawner_OnPlayerDied_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemySpawner, nullptr, "OnPlayerDied", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemySpawner_OnPlayerDied_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemySpawner_OnPlayerDied_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEnemySpawner_OnPlayerDied()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemySpawner_OnPlayerDied_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEnemySpawner::execOnPlayerDied)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPlayerDied();
+	P_NATIVE_END;
+}
+// End Class AEnemySpawner Function OnPlayerDied
+
 // Begin Class AEnemySpawner
 void AEnemySpawner::StaticRegisterNativesAEnemySpawner()
 {
+	UClass* Class = AEnemySpawner::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnEnemyDied", &AEnemySpawner::execOnEnemyDied },
+		{ "OnPlayerDied", &AEnemySpawner::execOnPlayerDied },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AEnemySpawner);
 UClass* Z_Construct_UClass_AEnemySpawner_NoRegister()
@@ -72,6 +136,11 @@ struct Z_Construct_UClass_AEnemySpawner_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SpawnTimeDecrement;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEnemySpawner_OnEnemyDied, "OnEnemyDied" }, // 849148638
+		{ &Z_Construct_UFunction_AEnemySpawner_OnPlayerDied, "OnPlayerDied" }, // 3482864904
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AEnemySpawner>::IsAbstract,
 	};
@@ -104,11 +173,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AEnemySpawner_Statics::
 	"Engine",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_AEnemySpawner_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AEnemySpawner_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -134,10 +203,10 @@ AEnemySpawner::~AEnemySpawner() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_EnemySpawner_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemySpawner, AEnemySpawner::StaticClass, TEXT("AEnemySpawner"), &Z_Registration_Info_UClass_AEnemySpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemySpawner), 3232778681U) },
+		{ Z_Construct_UClass_AEnemySpawner, AEnemySpawner::StaticClass, TEXT("AEnemySpawner"), &Z_Registration_Info_UClass_AEnemySpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemySpawner), 1096893214U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_EnemySpawner_h_4105912157(TEXT("/Script/GunSurviver"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_EnemySpawner_h_4225787567(TEXT("/Script/GunSurviver"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_EnemySpawner_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_EnemySpawner_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -12,6 +12,8 @@
 
 #include "Enemy.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FEnemyDeathDelegate);
+
 UCLASS()
 class GUNSURVIVER_API AEnemy : public AActor
 {
@@ -44,6 +46,8 @@ public:
 	float StopDistance = 20.0f;
 
 	FTimerHandle DestroyTimer;
+
+	FEnemyDeathDelegate EnemyDeathDelegate;
 
 	virtual void BeginPlay() override;
 

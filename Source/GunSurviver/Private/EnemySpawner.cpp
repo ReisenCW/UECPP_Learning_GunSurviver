@@ -1,4 +1,5 @@
 #include "EnemySpawner.h"
+#include "Kismet/GameplayStatics.h"
 
 AEnemySpawner::AEnemySpawner()
 {
@@ -9,6 +10,16 @@ AEnemySpawner::AEnemySpawner()
 void AEnemySpawner::BeginPlay()
 {
 	Super::BeginPlay();
+	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(GetWorld());	
+	if (GameMode) {
+		MyGameMode = Cast<AMyGameMode>(GameMode);
+		check(MyGameMode);
+	}
+	AActor* PlayerActor = UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass());
+	if (PlayerActor) {
+		PlayerCharacter = Cast<APlayerCharacter>(PlayerActor);
+		PlayerCharacter->PlayerDiedDelegate.AddDynamic(this, &AEnemySpawner::OnPlayerDied);
+	}
 	StartSpawning();
 	
 }
@@ -38,6 +49,7 @@ void AEnemySpawner::SpawnEnemy() {
 	RandomLocation *= SpawnDistance;
 	FVector EnemyLocation = GetActorLocation() + FVector(RandomLocation.X, 0.0f, RandomLocation.Y);
 	AEnemy* Enemy = GetWorld()->SpawnActor<AEnemy>(EnemyClass, EnemyLocation, FRotator(0.0f, 0.0f, 0.0f));
+	SetupEnemy(Enemy);
 	//increase difficulty
 	TotalEnemyCount++;
 	if (TotalEnemyCount % DifficultySpikeInterval == 0) {
@@ -49,4 +61,31 @@ void AEnemySpawner::SpawnEnemy() {
 			StartSpawning();
 		}
 	}
+}
+
+void AEnemySpawner::SetupEnemy(AEnemy* Enemy) {
+	if (Enemy) {
+		Enemy->PlayerCharacter = PlayerCharacter;
+		Enemy->CanFollow = true;
+		Enemy->EnemyDeathDelegate.AddDynamic(this, &AEnemySpawner::OnEnemyDied);
+	}
+}
+
+void AEnemySpawner::OnEnemyDied() {
+	int ScoreToAdd = 10;
+	MyGameMode->AddScore(ScoreToAdd);
+}
+
+void AEnemySpawner::OnPlayerDied() {
+	StopSpawning();
+
+	TArray<AActor*> EnemyArray;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AEnemy::StaticClass(), EnemyArray);
+	for (AActor* EnemyActor : EnemyArray) {
+		AEnemy* Enemy = Cast<AEnemy>(EnemyActor);
+		if (Enemy && Enemy->IsAlive) {
+			Enemy->CanFollow = false;
+		}
+	}
+	MyGameMode->RestartGame();
 }

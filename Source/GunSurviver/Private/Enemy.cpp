@@ -2,6 +2,7 @@
 
 #include "kismet/GameplayStatics.h"
 
+
 AEnemy::AEnemy()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -16,15 +17,6 @@ AEnemy::AEnemy()
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-
-	if (!PlayerCharacter) {
-		AActor* PlayerActor = UGameplayStatics::GetActorOfClass(GetWorld(), APlayerCharacter::StaticClass());
-		if (PlayerActor) {
-			PlayerCharacter = Cast<APlayerCharacter>(PlayerActor);
-			CanFollow = true;
-		}
-	}
-	
 }
 
 void AEnemy::Tick(float DeltaTime)
@@ -60,6 +52,8 @@ void AEnemy::Die() {
 
 	EnemyFlipbook->SetFlipbook(DeadFlipbookAsset);
 	EnemyFlipbook->SetTranslucentSortPriority(-2);
+
+	EnemyDeathDelegate.Broadcast();
 	
 	GetWorldTimerManager().SetTimer(DestroyTimer, this, &AEnemy::OnDestroyTimerTimeout, 1.0f, false, 4.0f);
 }

@@ -14,7 +14,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GUNSURVIVER_Enemy_generated_h
 
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_15_DELEGATE \
+GUNSURVIVER_API void FEnemyDeathDelegate_DelegateWrapper(const FMulticastScriptDelegate& EnemyDeathDelegate);
+
+
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEnemy(); \
 	friend struct Z_Construct_UClass_AEnemy_Statics; \
@@ -23,7 +27,7 @@ public: \
 	DECLARE_SERIALIZER(AEnemy)
 
 
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AEnemy(AEnemy&&); \
@@ -35,12 +39,12 @@ public: \
 	NO_API virtual ~AEnemy();
 
 
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_15_PROLOG
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_18_GENERATED_BODY \
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_17_PROLOG
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_20_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_Enemy_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

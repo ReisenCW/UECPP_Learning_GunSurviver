@@ -9,12 +9,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef GUNSURVIVER_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
 #define GUNSURVIVER_PlayerCharacter_generated_h
 
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_29_INCLASS_NO_PURE_DECLS \
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_28_DELEGATE \
+GUNSURVIVER_API void FPlayerDiedDelegate_DelegateWrapper(const FMulticastScriptDelegate& PlayerDiedDelegate);
+
+
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOverlapBegin);
+
+
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -23,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_29_ENHANCED_CONSTRUCTORS \
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APlayerCharacter(APlayerCharacter&&); \
@@ -35,12 +46,13 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_26_PROLOG
-#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_29_GENERATED_BODY \
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_30_PROLOG
+#define FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_29_INCLASS_NO_PURE_DECLS \
-	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_29_ENHANCED_CONSTRUCTORS \
+	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_INCLASS_NO_PURE_DECLS \
+	FID_Unreal_Projects_learning_GunSurviver_GunSurviver_Source_GunSurviver_Public_PlayerCharacter_h_33_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

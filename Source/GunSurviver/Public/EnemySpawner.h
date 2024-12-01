@@ -4,6 +4,8 @@
 #include "GameFramework/Actor.h"
 
 #include "Enemy.h"
+#include "MyGameMode.h"
+#include "PlayerCharacter.h"
 #include "Engine/TimerHandle.h"
 
 #include "EnemySpawner.generated.h"
@@ -37,6 +39,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float SpawnTimeDecrement = 0.05f;
 
+	APlayerCharacter* PlayerCharacter;
+	AMyGameMode* MyGameMode;
+
 	FTimerHandle EnemySpawnTimer;
 
 	virtual void BeginPlay() override;
@@ -47,4 +52,11 @@ public:
 	void SpawnEnemy();
 	void StartSpawning();
 	void StopSpawning();
+	void SetupEnemy(AEnemy* Enemy);
+
+	UFUNCTION()
+	void OnEnemyDied();
+
+	UFUNCTION()
+	void OnPlayerDied();
 };
