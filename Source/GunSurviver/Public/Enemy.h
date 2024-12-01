@@ -10,6 +10,8 @@
 
 #include "PlayerCharacter.h"
 
+#include "Kismet/GameplayStatics.h"
+
 #include "Enemy.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FEnemyDeathDelegate);
@@ -29,6 +31,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UPaperFlipbook* DeadFlipbookAsset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	USoundBase* EnemyDeathSound;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	APlayerCharacter* PlayerCharacter;

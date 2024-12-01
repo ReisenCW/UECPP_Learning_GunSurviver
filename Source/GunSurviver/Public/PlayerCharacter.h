@@ -21,7 +21,7 @@
 
 #include "Engine/TimerHandle.h"
 
-
+#include "Sound/SoundBase.h"
 
 #include "PlayerCharacter.generated.h"
 
@@ -64,6 +64,12 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	UPaperFlipbook* RunFlipbook;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	USoundBase* ShootSound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	USoundBase* PlayerDeathSound;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float MovementSpeed = 100.f;

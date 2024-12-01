@@ -1,6 +1,6 @@
 #include "PlayerCharacter.h"
 #include "Kismet/KismetMathLibrary.h"
-
+#include "Kismet/GameplayStatics.h"
 #include "Enemy.h"
 
 APlayerCharacter::APlayerCharacter()
@@ -136,7 +136,9 @@ void APlayerCharacter::MoveTriggered(const FInputActionValue& Value) {
 
 void APlayerCharacter::MoveCompleted(const FInputActionValue& Value) {
 	MovementDirection = FVector2D::ZeroVector;
-	CharacterFlipbook->SetFlipbook(IdleFlipbook);
+	if (IsAlive) {
+		CharacterFlipbook->SetFlipbook(IdleFlipbook);
+	}
 }
 
 void APlayerCharacter::Shoot(const FInputActionValue& Value) {
@@ -163,11 +165,14 @@ void APlayerCharacter::Shoot(const FInputActionValue& Value) {
 
 		GetWorldTimerManager().SetTimer(ShootCoolDownTimer, this, &APlayerCharacter::OnShootCollDownTimeOut, 
 			1.0f, false, ShootCoolDownInSecs);
+		UGameplayStatics::PlaySound2D(GetWorld(), ShootSound);
 	}
 }
 
 void APlayerCharacter::OnShootCollDownTimeOut() {
-	CanShoot = true;
+	if (IsAlive) {
+		CanShoot = true;
+	}
 }
 
 
@@ -178,7 +183,7 @@ void APlayerCharacter::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AA
 		IsAlive = false;
 		CanMove = false;
 		CanShoot = false;
-
+		UGameplayStatics::PlaySound2D(GetWorld(), PlayerDeathSound);
 		PlayerDiedDelegate.Broadcast();
 	}
 }

@@ -53,6 +53,7 @@ void AEnemy::Die() {
 	EnemyFlipbook->SetFlipbook(DeadFlipbookAsset);
 	EnemyFlipbook->SetTranslucentSortPriority(-2);
 
+	UGameplayStatics::PlaySound2D(GetWorld(), EnemyDeathSound);
 	EnemyDeathDelegate.Broadcast();
 	
 	GetWorldTimerManager().SetTimer(DestroyTimer, this, &AEnemy::OnDestroyTimerTimeout, 1.0f, false, 4.0f);
